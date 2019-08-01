@@ -1,0 +1,26 @@
+server:
+  port: 8080
+  tomcat:
+    uri-encoding: utf-8
+  address: 0.0.0.0
+
+#mysql drive
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/collectionSystem?useUnicode=true&characterEncoding=utf-8
+    username: root
+    password: 123456
+  thymeleaf:
+    cache: false
+    suffix: .html
+    mode: HTML
+    encoding: UTF-8
+  devtools:
+    restart:
+      enabled: true
+      additional-paths: src/main/java
+
+
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
